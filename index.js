@@ -15,7 +15,7 @@ function urlBase64ToUint8Array(base64String) {
 /** @typedef {Promise<{ "public": string }>} VapidKeys */
 /** @returns {VapidKeys} */
 async function fetchVapidKeys() {
-  return fetch("/api/vapid.json").then((resp) => resp.json());
+  return {"publicKey":"BAFpiPJBZOqNZcJGy0eiB1CIwMflt7ugC2B083zKPFu9djmajpSnVnUAFnlDNkzaKHf2gla5_FuDhXE-zIkx5MI"};
 }
 
 /** @param {VapidKeys} vapidKeys */
@@ -43,7 +43,12 @@ async function main() {
   let state = document.getElementById("state");
 
   try {
-    let keys = await fetchVapidKeys();
+    let keys = await 
+    
+    
+    
+    
+    ();
     await askPermission();
     state.subscription = await subscribeUserToPush(keys);
     details.textContent = JSON.stringify(state.subscription, null, 4);
